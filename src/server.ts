@@ -2,6 +2,7 @@ import express from "express"
 import router from "../routes/messagesRoutes"
 import connectionDB from "../database/config"
 import errorHandler from "../middleware/errorHandler"
+import cors from 'cors';
 
 async function server() {
   const app = express()
@@ -9,7 +10,7 @@ async function server() {
 
   app.use(express.json())
   app.use(errorHandler)
-
+  app.use(cors())
   try {
     connectionDB()
     app.use(router)
