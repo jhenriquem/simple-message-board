@@ -1,16 +1,12 @@
 import { model, Schema } from "mongoose";
 
-interface User {
-  name: string,
-  date: string,
-  message: string
-}
+import UserI from "../types/userTypes";
 
-const userSchema = new Schema<User>({
-  name: { type: String, required: true },
+const userSchema = new Schema<UserI>({
+  username: { type: String, required: true },
   date: { type: String, required: true },
   message: { type: String, required: true }
 })
 
-export const userModel = model<User>("User", userSchema)
+export const userModel = model<UserI>("User", userSchema)
 
