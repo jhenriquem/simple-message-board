@@ -1,22 +1,16 @@
 import { Error } from "mongoose";
 import { userModel } from "../database/userModel";
-
-interface UserI {
-  name: string,
-  date: string,
-  message: string
-}
+import UserI from "../types/userTypes";
 
 export async function getUsers() {
   try {
-    const usuarios = await userModel.find({}, { name: 1, message: 1, date: 1 })
+    const usuarios = await userModel.find({}, { username: 1, message: 1, date: 1, _id: 1 })
     return usuarios
   }
   catch (err) {
     return new Error(`Error fetching users : ${err}`)
   }
 }
-
 export async function NewUser(userData: UserI) {
   const newUser = new userModel(userData)
 
