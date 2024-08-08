@@ -1,4 +1,4 @@
-# 💬 Simple Message Board
+<h1 align="center">💬 Simple Message Board</h1>
 
 Um simples quadro de mensagens é um aplicativo da web que permite aos usuários deixar mensagens em um quadro público. Os usuários podem postar mensagens e visualizar uma lista de todas as mensagens que foram postadas.
 
@@ -29,9 +29,6 @@ Um simples quadro de mensagens é um aplicativo da web que permite aos usuários
 - Mongoose
 - MongoDB
 
-
-
-
-[Live Demo](https://jhenriquem.github.io/simple-message-board) :point_left:
+## [Live Demo](https://jhenriquem.github.io/simple-message-board) :point_left:
 
 <img src="./screenshot.png" alt="screenshot" />
